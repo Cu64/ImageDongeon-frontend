@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Layout from '../../components/Layout/Layout'
 import settings from '../../settings'
 import { grab } from '../../util/utils'
@@ -7,9 +8,11 @@ const index = ({ data }) => {
     const renderItems = () => (
         data.map(item => (
             <div>
-                <a href={`/posts/${item.id}`}>
-                    <img src={`${settings.API_URL}images/${item.id}`} />
-                </a>
+                <Link href={`/posts/${item.id}`}>
+                    <a>
+                        <img src={`${settings.API_URL}images/${item.id}`} />
+                    </a>
+                </Link>
             </div>
         )
     ))
