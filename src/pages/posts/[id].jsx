@@ -7,7 +7,7 @@ import Layout from '../../components/Layout/Layout'
 
 import settings from '../../settings'
 
-const Image = ({ data, id }) => {
+const Posts = ({ data, id }) => {
 	return (
 		<Layout>
 			<div className="container">
@@ -31,7 +31,7 @@ const Image = ({ data, id }) => {
 					</div>
 					<div className="single-image__image">
 						<img
-							className="max-h-screen"
+							style={{maxHeight: '85vh'}}
 							src={`${settings.API_URL}images/${id}`}
 						/>
 					</div>
@@ -49,4 +49,4 @@ export async function getServerSideProps({ res, err, params }) {
 	}
 }
 
-export default Image
+export default Posts

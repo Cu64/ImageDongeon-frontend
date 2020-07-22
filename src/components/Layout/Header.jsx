@@ -8,8 +8,8 @@ const Header = () => {
 			<div className="text-2xl mr-8">Image Dongeon</div>
 
 			<nav className="site-nav text-white">
-				<a href="#">Home</a>
-				<a href="#">Posts</a>
+				<a href="/">Home</a>
+				<a href="/posts">Posts</a>
 				<a href="#">Upload</a>
 				<a href="#">Tags</a>
 				<a href="#">Pools</a>
