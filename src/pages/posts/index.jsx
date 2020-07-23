@@ -8,9 +8,9 @@ const index = ({ data }) => {
     const renderItems = () => (
         data.map(item => (
             <div>
-                <Link href={`/posts/${item.id}`} as={`/posts/${item.id}`}>
+                <Link href={`/posts/${item.post_id}`} as={`/posts/${item.post_id}`}>
                     <a>
-                        <img src={`${settings.API_URL}images/${item.id}`} />
+                        <img src={`${settings.API_URL}thumbs/${item.post_id}`} />
                     </a>
                 </Link>
             </div>

@@ -11,7 +11,7 @@ const index = ({ data }) => {
 			{data.featured_post &&
 			<img
 				className="mx-auto object-center"
-				style={{maxHeight: '80vh'}}
+				style={{maxHeight: '75vh'}}
 				src={`${settings.API_URL}images/${data.featured_post}`}
 			/>
 			}

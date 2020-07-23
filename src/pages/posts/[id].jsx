@@ -17,8 +17,8 @@ const Posts = ({ data, id }) => {
 						{data.tags.map((tag) => (
 							<div>{tag}</div>
 						))}
-						<h2>Data</h2>
-						ID: {data.id}
+						<h2 className="pt-5">Data</h2>
+						ID: {data.post_id}
 						<br />
 						Height: {data.height}px
 						<br />
