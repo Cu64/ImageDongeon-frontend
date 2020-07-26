@@ -8,9 +8,13 @@ const index = ({ data }) => {
     const renderItems = () => (
         data.map(item => (
             <div>
-                <Link href={`/posts/${item.post_id}`} as={`/posts/${item.post_id}`}>
+                <Link href="/posts/[id]" as={`/posts/${item.post_id}`}>
                     <a>
-                        <img src={`${settings.API_URL}thumbs/${item.post_id}`} />
+                        <img title={`Post #${item.post_id}
+Tags: ${item.tags.join(" ")}
+Size: ${item.width}x${item.height}
+Posted on: ${new Date(item.post_time * 1000).toLocaleString()}
+Rating: ${item.rating}`} src={`${settings.API_URL}thumbs/${item.post_id}`} />
                     </a>
                 </Link>
             </div>

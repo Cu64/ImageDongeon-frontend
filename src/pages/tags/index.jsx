@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout/Layout'
+import Link from 'next/link'
 import settings from '../../settings'
 import { grab } from '../../util/utils'
 
@@ -7,7 +8,7 @@ const index = ({ data }) => {
     const renderItems = () => (
         data.tags.map(item => (
             <ul className="list-none">
-                <li>{item}</li>
+                <li><Link href={`/tags/[name]`} as={`/tags/${item}`}><a>{item}</a></Link></li>
             </ul>
         )
     ))

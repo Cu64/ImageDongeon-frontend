@@ -11,10 +11,11 @@ const Header = () => {
 			<nav className="site-nav text-white">
 				<Link href="/"><a>Home</a></Link>
 				<Link href="/posts"><a>Posts</a></Link>
-				<a href="#">Upload</a>
+				<Link href="/upload/"><a>Upload</a></Link>
 				<Link href="/tags"><a>Tags</a></Link>
 				<a href="#">Pools</a>
 				<a href="#">Users</a>
+				<Link href="/admin"><a>Admin</a></Link>
 			</nav>
 
 			<div className="ml-auto">
