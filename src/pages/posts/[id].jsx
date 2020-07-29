@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import Error from 'next/error'
-import Head from 'next/head'
 import { grab } from '../../util/utils'
-
 import Layout from '../../components/Layout/Layout'
-
 import settings from '../../settings'
+import Link from 'next/link'
 
 const Posts = ({ data, id }) => {
 	return (
@@ -15,7 +12,10 @@ const Posts = ({ data, id }) => {
 					<div className="single-image__details">
 						<h2>Tags</h2>
 						{data.tags.map((tag) => (
-							<div>{tag}</div>
+							<div>
+								<Link href="/tags/[name]" as={`/tags/${tag}`}><a>?</a></Link>
+								<Link href="/search/[query]" as={`/search/${tag}`}><a> {tag}</a></Link>
+							</div>
 						))}
 						<h2 className="pt-5">Data</h2>
 						ID: {data.post_id}

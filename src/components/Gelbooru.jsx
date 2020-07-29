@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import settings from '../settings'
 
-const SearchBar = () => {
+const Gelbooru = () => {
 
-    var getParams = function(url) {
+    const getParams = (url) => {
         var params = {}
         var parser = document.createElement('a')
         parser.href = url
@@ -30,17 +30,15 @@ const SearchBar = () => {
 	}
 
 	return (
-        <div className="container">
+        <div className="container pb-5">
             <p className="text-3xl">Import post from Gelbooru</p>
 		    <div className="bg-white border">
 		    	<form onSubmit={(e) => handleSubmit(e)}>
-		    		<input className="py-2 px-2 ml-auto text-black h-6" type="text" onChange={(e) => setInput(e.currentTarget.value)} placeholder="Post link to import" />
-		    		<button type="submit" className="mx-2 align-middle">
-		    		</button>
+		    		<input className="py-2 px-2 ml-auto w-full text-black h-6" type="text" onChange={(e) => setInput(e.currentTarget.value)} placeholder="Post link to import" />
 		    	</form>
 		    </div>
         </div>
 	)
 }
 
-export default SearchBar
+export default Gelbooru
